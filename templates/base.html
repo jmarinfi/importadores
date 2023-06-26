@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     {% block head %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
     <title>{% block title %}{% endblock%} - Importadores</title>
     {% endblock %}
-</head>
+  </head>
 
-<body>
-
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="/">Inicio</a></li>
-            <li class="nav-item"><a href="#">Extensímetros</a></li>
-            <li class="nav-item"><a href="#">Células de presión</a></li>
-            <li class="nav-item"><a href="#">Inclinómetros</a></li>
-            <li class="nav-item"><a href="#">Nivelación</a></li>
-        </ul>
-    </nav>
+  <body class="w3-light-gray">
+    <div class="w3-bar w3-black">
+      <a href="/" class="w3-bar-item w3-button w3-hover-gray">Inicio</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-gray">Extensímetros</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-gray"
+        >Células de presion</a
+      >
+      <a href="#" class="w3-bar-item w3-button w3-hover-gray">Inclinómetros</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-gray">Nivelación</a>
+    </div>
 
     <div id="content" class="content">{% block content %}{% endblock %}</div>
 
-    <div id="footer" class="footer">
-        {% block footer %}
-        &copy; Copyright 2023 by <a href="https://www.ofiteco.com/" target="_blank">Ofiteco</a>
-        {% endblock %}
+    <div class="w3-container w3-black" id="footer">
+      {% block footer %} &copy; Copyright 2023 by
+      <a href="https://www.ofiteco.com/" target="_blank">Ofiteco</a>
+      {% endblock %}
     </div>
-
-</body>
-
+  </body>
 </html>
