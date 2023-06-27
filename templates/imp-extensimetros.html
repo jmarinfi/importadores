@@ -1,12 +1,22 @@
 {% extends "base.html" %} {% block title %} Extensímetros {% endblock %} {%block
 content %}
 
-<div class="w3-container">
-  <a
-    href="{{ url_for('static', filename='files/plantilla_ECV.xlsx') }}"
-    class="w3-button w3-black"
-    >Plantilla</a
-  >
-</div>
+<p>Atributos del sensor: {{ dao_td.get_sensor_attrs('HN-00038-20') }}</p>
+<p>Atributos de la presa: {{ dao_td.get_presa_attrs('104') }}</p>
+<p>Atributos del sistema: {{ dao_td.get_sistema_attrs('68') }}</p>
+<p>
+  Referencias del sensor: {{
+  dao_td.get_referencias_from_id_sensor('HN-00038-20') }}
+</p>
+<p>
+  Medida de la fecha '2023-05-13 09:00:00': {{
+  dao_td.get_medida_from_registro('78104', '2023-05-13 09:00:00') }}
+</p>
+<p>Fecha más reciente: {{ dao_td.get_eldest_fecha('78104') }}</p>
+<p>
+  Lectura de la fecha '2023-05-13 09:00:00': {{ dao_td.get_l0('78104',
+  '2023-05-13 09:00:00') }}
+</p>
+<p>Umbrales: {{ dao_td.get_umbrales_from_id_sensor('78104') }}</p>
 
 {% endblock %}
