@@ -10,7 +10,7 @@
     />
     <link
       rel="icon"
-      href="{{ url_for('static', filename='favicon.ico') }}"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
       type="image/x-icon"
     />
     <link
@@ -24,7 +24,11 @@
   <body class="w3-light-gray">
     <div class="w3-bar w3-black">
       <a href="/" class="w3-bar-item w3-button w3-hover-gray">Inicio</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-gray">Extensímetros</a>
+      <a
+        href="{{ url_for('imp_strain_gages') }}"
+        class="w3-bar-item w3-button w3-hover-gray"
+        >Extensímetros</a
+      >
       <a href="#" class="w3-bar-item w3-button w3-hover-gray"
         >Células de presion</a
       >
