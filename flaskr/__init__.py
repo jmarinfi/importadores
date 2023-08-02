@@ -37,4 +37,9 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
+    # Register the importadores blueprint
+    from . import importadores
+    app.register_blueprint(importadores.bp)
+    app.add_url_rule('/', endpoint='index')
+
     return app
