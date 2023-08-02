@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS sensor;
 DROP TABLE IF EXISTS sistema;
 DROP TABLE IF EXISTS umbrales;
 DROP TABLE IF EXISTS parametros;
+DROP TABLE IF EXISTS user;
 
 CREATE TABLE sistema (
     id_sistema INTEGER PRIMARY KEY,
@@ -62,4 +63,10 @@ CREATE TABLE parametros (
     par_g REAL,
     par_k REAL,
     id_sensor_parametros REFERENCES sensor (id_sensor)
+);
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
 );

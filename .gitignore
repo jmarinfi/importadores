@@ -1,6 +1,6 @@
 /__pycache__
 /flaskr/__pycache__
-/instance
+instance/
 /venv
 .vscode/
 dao/__pycache__
