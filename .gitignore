@@ -4,3 +4,4 @@
 /venv
 .vscode/
 dao/__pycache__
+commands.txt
