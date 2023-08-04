@@ -5,3 +5,4 @@ instance/
 .vscode/
 dao/__pycache__
 commands.txt
+queries.py
